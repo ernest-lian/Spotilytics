@@ -1,63 +1,62 @@
 import React, {Component} from 'react';
 
-import { AppBar, Toolbar, Typography, IconButton, Box, Drawer } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, IconButton, Box } from '@material-ui/core';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { makeStyles } from '@material-ui/core/styles';
 
-/* Side Navigation Bar */
-import MenuIcon from '@material-ui/icons/Menu';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShowChartIcon from '@material-ui/icons/ShowChart';
-import SearchIcon from '@material-ui/icons/Search';
-
-const styles = {
+const styles = makeStyles({
     appBarStyle: {
-        background : '#2E3B55'
+        // background : '#2E3B55'
+        background: 'linear-gradient(45deg, #0d47a1 10%, #64b5f6 90%)'
     },
     profileButtonStyle: {
-        align: 'center'
-    },
-    drawerStyle: {
-        background: "blue"
-    }
-};
 
-const element = (
-    <div>
-    <AppBar position='static' style={styles['appBarStyle']}>
-        <Toolbar>
-            <Typography variant="h6" color="inherit">
+    },
+    toolBarStyle: {
+        display: 'flex',
+        'justify-content': 'center',
+        'flex-wrap': 'wrap'
+    },
+    typographyStyle: {
+        flex: 1
+    }
+});
+
+function RenderTopNavigationBar(){
+    const classes = styles();
+    return (
+    <AppBar position='fixed' className={classes.appBarStyle}>
+        <Toolbar className={classes.toolBarStyle}>
+            <Typography variant="h6" color="inherit" className={classes.typographyStyle}>
               Spotilytics
             </Typography>
             <Box>
-                <IconButton color='inherit' style={styles['profileButtonStyle']}>
+                <IconButton color='inherit' className={classes.profileButtonStyle}
+                            onClick={()=> {getData();}}>
                     <AccountCircle />
                 </IconButton>
             </Box>
         </Toolbar>
-    </AppBar>
-        <Drawer variant="persistent"
-            anchor="left"
-            open={open}
-        >
-            <IconButton>
-                <MenuIcon />
-            </IconButton>
-            <IconButton>
-                <DashboardIcon />
-            </IconButton>
-            <IconButton>
-                <ShowChartIcon />
-            </IconButton>
-            <IconButton>
-                <SearchIcon />
-            </IconButton>
-        </Drawer>
-    </div>
-)
+    </AppBar>);
+}
+
+function getData() {
+    // create a new XMLHttpRequest
+    var xhr = new XMLHttpRequest()
+
+    // get a callback when the server responds
+    xhr.addEventListener('load', () => {
+      // update the state of the component with the result here
+      console.log(xhr.responseText)
+    })
+    // open the request with the verb and the url
+    xhr.open('GET', 'localhost:5000/dashboard?user_name=testing')
+    // send the request
+    xhr.send()
+}
 
 export class TopNavigationBar extends Component{
     render () {
-        return element
+        return <RenderTopNavigationBar />
     }
 }
