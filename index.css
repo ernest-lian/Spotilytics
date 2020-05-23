@@ -1,4 +1,20 @@
-#hello {
-	font-family: "Times New Roman"
-	color: red
+html {
+	height: 100%;
+	width: 100%;
 }
+body {
+	background-color: #F4C3C2;
+	/* background-image: linear-gradient(#FF7E6B, #F4C3C2); */
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+#app {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	align-items: center;

@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import configureStore from './src/store';
 
-// imports the dashboard javascript file
-import Dashboard from './containers/dashboard';
-import TopNavigationBar from './containers/topNavigationBar'
+import Application from './src/application'
 
-
-ReactDOM.render(<Dashboard />, document.getElementById('app'))
+ReactDOM.render(<Provider store={configureStore()}>
+                    <Application/>
+                </Provider>,
+                document.getElementById('app')
+)
