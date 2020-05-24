@@ -1,24 +1,22 @@
-import React, {Component, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
 
-import { Box, Typography, Button, AppBar, Toolbar } from '@material-ui/core';
+import { Box, Typography, AppBar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 
 import Dashboard from './dashboard.js';
 import Analytics from './analytics.js';
-import Predictions from './predictions.js';
+import Recommendations from './recommendations.js';
+import NavigationOptions from './navigationOptions.js';
 
-import { setName, setDisplayPicture, setTopSongs, setTopArtists, setAnalytics } from './actions/rootAction';
-import { getName, getDisplayPicture, getCurrentPage } from './selectors/rootSelectors';
-
+import { setName, setDisplayPicture, setTopSongs, setTopArtists, setAnalytics, setRecommendations } from './actions/rootAction';
+import { getDisplayPicture } from './selectors/rootSelectors';
 
 
 const styles = makeStyles({
@@ -43,14 +41,13 @@ const styles = makeStyles({
     }
 });
 
-function loginUser(setName, setDisplayPicture, setTopSongs, setTopArtists, setAnalytics) {
+function loginUser(setName, setDisplayPicture, setTopSongs, setTopArtists, setAnalytics, setRecommendations) {
     var xhr = new XMLHttpRequest()
 
     xhr.addEventListener('load', () => {
     })
 
     xhr.open('POST', 'http://localhost:5000/login', false)
-
     xhr.send()
 
     console.log(JSON.parse(xhr.response))
@@ -59,12 +56,14 @@ function loginUser(setName, setDisplayPicture, setTopSongs, setTopArtists, setAn
     const topSongs = JSON.parse(xhr.response)['body']['top_tracks'].splice(0,5)
     const topArtists = JSON.parse(xhr.response)['body']['top_artists']
     const analytics = JSON.parse(xhr.response)['body']['analytics']
+    const recommendations = JSON.parse(xhr.response)['body']['recommendations']
 
     setDisplayPicture(displayPicture)
     setName(name)
     setTopSongs(topSongs)
     setTopArtists(topArtists)
     setAnalytics(analytics)
+    setRecommendations(recommendations)
 }
 
 const Application = ({
@@ -73,15 +72,18 @@ const Application = ({
     setTopSongs,
     setAnalytics,
     setTopArtists,
-    displayPicture
+    setRecommendations
 }) => {
     const classes = styles();
-    loginUser(setName, setDisplayPicture, setTopSongs, setTopArtists, setAnalytics);
+
+    useEffect(() => {
+        loginUser(setName, setDisplayPicture, setTopSongs, setTopArtists, setAnalytics, setRecommendations);
+    }, []);
 
     return(
     <Box display='flex' flexDirection='column' height='100%' width='100%'>
         <Router>
-            <Box>
+            <Box pb={8}>
                 <AppBar position='fixed' className={classes.appBarStyle}>
                     <Box display='flex' justifyContent='space-around' id='hello'>
                         <Box alignSelf='center'>
@@ -91,46 +93,23 @@ const Application = ({
                         </Box>
                         <Box display='flex' alignItems='center'>
                             <ul style={{'display':'flex', 'listStyleType': 'none', 'alignItems': 'center'}}>
-                                <li className={classes.hoverNavigation}>
-                                <Link style={{'textDecoration': 'none'}} to="/dashboard" >
-                                    <Box component={Typography} variant="h6" color='primary' className={`${classes.typographyStyle} ${classes.noFontWeight}`} alignSelf='center'>
-                                        Dashboard
-                                    </Box>
-                                </Link>
-                                </li>
-                                <li className={classes.hoverNavigation}>
-                                <Link style={{'textDecoration': 'none'}}to="/analytics">
-                                    <Box component={Typography} variant="h6" color='primary' className={`${classes.typographyStyle} ${classes.noFontWeight}`} alignSelf='center'>
-                                        Analytics
-                                    </Box>
-                                </Link>
-                                </li>
-                                <li className={classes.hoverNavigation}>
-                                <Link style={{'textDecoration': 'none'}}to="/predictions">
-                                    <Box component={Typography} variant="h6" color='primary' className={`${classes.typographyStyle} ${classes.noFontWeight}`} alignSelf='center'>
-                                        Predictions
-                                    </Box>
-                                </Link>
-                                </li>
-                                <li style={{'paddingLeft': '16px'}}>
-                                    <Box component='img' style={{'objectFit': 'cover'}} src={displayPicture} display='flex' alignItems='center' borderRadius='50%' height='50px' width='50px'/>
-                                </li>
+                                <NavigationOptions/>
                             </ul>
                         </Box>
                     </Box>
                 </AppBar>
             </Box>
 
-            <Box paddingTop='82px'>
+            <Box>
                 <Switch>
-                    <Route path="/dashboard">
+                    <Route path="/Dashboard">
                         <Dashboard />
                     </Route>
-                    <Route path="/analytics">
+                    <Route path="/Analytics">
                         <Analytics />
                     </Route>
-                    <Route path="/predictions">
-                        <Predictions />
+                    <Route path="/Recommendations">
+                        <Recommendations />
                     </Route>
                 </Switch>
             </Box>
@@ -147,7 +126,8 @@ const mapDispatchToProps = {
     setDisplayPicture,
     setTopSongs,
     setTopArtists,
-    setAnalytics
+    setAnalytics,
+    setRecommendations
 };
 
 export default connect(

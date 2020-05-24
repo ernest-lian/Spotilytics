@@ -1,48 +1,53 @@
 
 import { createSelector } from 'reselect';
 
-export const nameState = state => state['simpleReducer'];
+export const baseState = state => state['simpleReducer'];
 
 export const getName = createSelector(
-    nameState,
+    baseState,
     (state) => {
-        console.log('state: ', state.get('name'));
         return state.get('name');
     }
 );
 
 export const getDisplayPicture = createSelector(
-    nameState,
+    baseState,
     (state) => {
         return state.get('displayPicture');
     }
 );
 
 export const getCurrentPage = createSelector(
-    nameState,
+    baseState,
     (state) => {
         return state.get('currentPage');
     }
 );
 
 export const getTopSongs = createSelector(
-    nameState,
+    baseState,
     (state) => {
         return state.get('topSongs');
     }
 );
 
 export const getTopArtists = createSelector(
-    nameState,
+    baseState,
     (state) => {
         return state.get('topArtists');
     }
 );
 
-
 export const getAnalytics = createSelector(
-    nameState,
+    baseState,
     (state) => {
         return state.get('analytics');
+    }
+);
+
+export const getRecommendations = createSelector(
+    baseState,
+    (state) => {
+        return state.get('recommendations');
     }
 );

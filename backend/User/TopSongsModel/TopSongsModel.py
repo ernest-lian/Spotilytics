@@ -14,9 +14,15 @@ class TopSongsModel:
             title = entry['name']
             artist = entry['artists'][0]['name']
             cover = entry['album']['images'][0]['url']
-            response = TopSongsDao.store(user_id, title, artist, cover, rank)
-
+            tracks.append({
+                'user_id': user_id,
+                'title': title,
+                'artist': artist,
+                'cover': cover,
+                'rank': rank
+            })
             rank += 1
-            tracks.append(response['body'])
 
-        return tracks
+        stored_tracks = TopSongsDao.create_connection(tracks)
+
+        return stored_tracks

@@ -61,7 +61,7 @@ const Artists = ({
     console.log('topArtists: ', topArtists)
     console.log(topArtists[0])
     return (
-        <Box display='flex' flexDirection='column' mt={2} pb={4} bgcolor='#5D250F'>
+        <Box display='flex' flexDirection='column' pb={4} bgcolor='#5D250F'>
 
             <MostPlayed topArtist={topArtists[0]}/>
             <Box display='flex' justifyContent='center' flexWrap='wrap'>

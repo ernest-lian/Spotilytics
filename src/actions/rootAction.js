@@ -27,3 +27,8 @@ export const setAnalytics = analytics => ({
      type: 'SET_ANALYTICS',
      payload: analytics
 });
+
+export const setRecommendations = recommendations => ({
+     type: 'SET_RECOMMENDATIONS',
+     payload: recommendations
+});

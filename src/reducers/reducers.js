@@ -11,16 +11,12 @@ const simpleReducer = (state = initialState, action) => {
         state = state.set('name', action.payload);
         return state
       case 'SET_DISPLAY_PICTURE':
-        console.log('set display picture');
         state = state.set('displayPicture', action.payload);
         return state
       case 'UPDATE_CURRENT_PAGE':
-        console.log('setting the current page');
         state = state.set('currentPage', action.payload);
         return state
       case 'SET_TOP_SONGS':
-        console.log('set history case');
-        console.log('history payload: ', action.payload);
         state = state.set('topSongs', action.payload);
         return state
       case 'SET_TOP_ARTISTS':
@@ -28,6 +24,9 @@ const simpleReducer = (state = initialState, action) => {
         return state
       case 'SET_ANALYTICS':
         state = state.set('analytics', action.payload);
+        return state
+      case 'SET_RECOMMENDATIONS':
+        state = state.set('recommendations', action.payload);
         return state
     default:
       return state

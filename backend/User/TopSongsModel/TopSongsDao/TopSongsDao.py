@@ -1,27 +1,42 @@
 import sqlite3
-import base64
-import simplejson as simplejson
+from sqlite3 import Error
 
 class TopSongsDao:
     @staticmethod
-    def store(user_id, title, artist, cover, rank):
+    def create_connection(tracks):
+        """ create a database connection to a SQLite database """
+        conn = None
+        try:
+            conn = sqlite3.connect('spotilytics.db')
+            c = conn.cursor()
 
-        conn = sqlite3.connect('spotilytics.db')
-        c = conn.cursor()
+            c.execute('''CREATE TABLE IF NOT EXISTS TopSongs (
+                            user_id text NOT NULL, 
+                            title text NOT NULL,
+                            artist text NOT NULL,
+                            cover text NOT NULL,
+                            rank integer NOT NULL,
+                            FOREIGN KEY (user_id) REFERENCES User (user_id)
+                        )''')
 
-        c.execute('''CREATE TABLE IF NOT EXISTS TopSongs
-                                            (user_id text, title text, artist text, cover text, rank integer)''')
+            c.execute("DELETE FROM TopSongs")
+            conn.commit()
 
-        c.execute("INSERT INTO TopSongs VALUES (?,?,?,?,?)",
-                  (user_id, title, artist, cover, rank))
-        conn.commit()
+            for track in tracks:
+                user_id = track['user_id']
+                title = track['title']
+                artist = track['artist']
+                cover = track['cover']
+                rank = track['rank']
 
-        return {'response': 200, 'body': {
-                                    'title': title,
-                                    'artist': artist,
-                                    'cover': cover,
-                                    'rank': rank
-                                    }
-                }
+                c.execute("INSERT INTO TopSongs VALUES (?,?,?,?,?)",
+                          (user_id, title, artist, cover, rank))
+                conn.commit()
+            return tracks
 
+        except Error as e:
+            print(e)
+        finally:
+            if conn:
+                conn.close()
 

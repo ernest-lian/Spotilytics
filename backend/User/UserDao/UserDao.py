@@ -1,43 +1,51 @@
 import sqlite3
-import base64
-import simplejson as simplejson
+from sqlite3 import Error
 import uuid
 
 class UserDao:
-
     @staticmethod
-    def login(user_name, name, user_profile):
-        # Connect to the Spotilytics database
-        conn = sqlite3.connect('spotilytics.db')
-        c = conn.cursor()
+    def create_connection(user_name, name, user_profile):
+        """ create a database connection to a SQLite database """
+        conn = None
+        try:
+            conn = sqlite3.connect('spotilytics.db')
+            # print(sqlite3.version)
+            
+            c = conn.cursor()
+            c.execute('''CREATE TABLE IF NOT EXISTS Users (
+                            user_id text PRIMARY KEY, 
+                            user_name text NOT NULL, 
+                            name text NOT NULL, 
+                            user_profile text NOT NULL
+                        )''')
 
-        c.execute('''CREATE TABLE IF NOT EXISTS Users
-                                    (user_id text, user_name text, name text, user_profile text)''')
+            c.execute("SELECT * FROM users WHERE user_name =?", (user_name,))
+            row = c.fetchone()
 
-        c.execute("SELECT * FROM users WHERE user_name =?", (user_name,))
-        row = c.fetchone()
+            if row:
+                return {'response': 200, 'body': {
+                                            'message': 'User already registered',
+                                            'name': row[2],
+                                            'display_picture': row[3],
+                                            'user_id': row[0]
+                                            }
+                        }
 
+            user_id = str(uuid.uuid1())
+            c.execute("INSERT INTO users VALUES (?,?,?,?)",
+                    (user_id, user_name, name, user_profile))
+            conn.commit()
 
-        if row:
             return {'response': 200, 'body': {
-                                        'message': 'User already registered',
-                                        'name': row[2],
-                                        'display_picture': row[3],
-                                        'user_id': row[0]
+                                        'message': 'Successful registration',
+                                        'name': name,
+                                        'display_picture': user_profile,
+                                        'user_id': user_id
                                         }
                     }
 
-        # Insert a user into the database
-        user_id = str(uuid.uuid1())
-
-        c.execute("INSERT INTO users VALUES (?,?,?,?)",
-                  (user_id, user_name, name, user_profile))
-        conn.commit()
-
-        return {'response': 200, 'body': {
-                                    'message': 'Successful registration',
-                                    'name': name,
-                                    'display_picture': user_profile,
-                                    'user_id': user_id
-                                    }
-                }
+        except Error as e:
+            print(e)
+        finally:
+            if conn:
+                conn.close()

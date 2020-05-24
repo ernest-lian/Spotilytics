@@ -14,9 +14,16 @@ class TopArtistsModel:
             name = entry['name']
             profile = entry['images'][0]['url']
 
-            response = TopArtistsDao.store(user_id, name, profile, rank)
-            rank+=1
-            artists.append(response['body'])
+            artists.append(
+                {
+                    'user_id': user_id,
+                    'name': name,
+                    'profile': profile,
+                    'rank': rank
+                }
+            )
+            rank += 1
 
-        return artists
+        stored_artists = TopArtistsDao.create_connection(artists)
+        return stored_artists
 

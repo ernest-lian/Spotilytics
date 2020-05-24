@@ -62,9 +62,8 @@ const SongOptions = ({
 const Song = ({
     topSongs
 }) => {
-    
     return (
-        <Box display='flex' flexDirection='column' mt={2}>
+        <Box display='flex' flexDirection='column' pt={2} bgcolor='bisque'>
             {console.log('this is the topSongs:  ', topSongs)}
             {console.log('this is the topSongs[0]:  ', topSongs[0])}
             <MostPlayed topSong={topSongs[0]}/>
