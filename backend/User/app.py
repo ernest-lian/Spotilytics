@@ -1,7 +1,8 @@
 import sys
+import json
 
 # Flask imports
-from flask import Flask
+from flask import Flask, request
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, jwt_refresh_token_required, get_jwt_identity
 
@@ -14,7 +15,7 @@ from backend.User.TopArtistsModel.TopArtistsModel import TopArtistsModel
 from backend.User.TopSongsModel.TopSongsModel import TopSongsModel
 from backend.User.AnalyticsModel.AnalyticsModel import AnalyticsModel
 from backend.User.PredictModel.PredictModel import PredictModel
-from backend.machine_learning.model import predict_genre
+from backend.User.PlaylistModel.PlaylistModel import PlaylistModel
 
 # Dao imports
 from backend.User.UserDao.UserDao import UserDao
@@ -118,6 +119,30 @@ def create_playlist():
 
     '''
 
+
+    scope = 'user-read-recently-played user-top-read'
+
+    with app.app_context():
+
+        if len(sys.argv) > 1:
+            username = sys.argv[1]
+        else:
+            print("Usage: %s username" % (sys.argv[0],))
+            sys.exit()
+
+        user_name = 'ernest.lian97'
+
+        token = util.prompt_for_user_token("ernest.lian97", scope, client_id='db3cb208eea947b9b5115eaba840402e',
+                                           client_secret='7b4727b89b3f463985624fe4c145bc97',
+                                           redirect_uri='https://example.com/callback/')
+
+        sp = spotipy.Spotify(auth=token)
+
+
+        data = request.data.decode('utf-8')
+        playlist_name = 'Spotilytics - ' + json.loads(data)['playlist_name']
+
+        response = PlaylistModel.create(sp, playlist_name, user_name)
 
     return {'response': 200}
 

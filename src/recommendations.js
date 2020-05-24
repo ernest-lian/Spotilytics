@@ -30,14 +30,15 @@ const SongRecommendations = ({
     });
 }
 
-function createPlaylist() {
+function createPlaylist(playlistName) {
     var xhr = new XMLHttpRequest()
 
     xhr.addEventListener('load', () => {
     })
 
     xhr.open('POST', 'http://localhost:5000/playlist', false)
-    xhr.send()
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+    xhr.send(JSON.stringify({'playlist_name': playlistName}))
 
     console.log(JSON.parse(xhr.response))
 

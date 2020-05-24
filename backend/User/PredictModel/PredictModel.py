@@ -25,11 +25,13 @@ class PredictModel:
 
         store_tracks = []
         for track in sp.recommendations(seed_genres=[all_genres[max(genre_dict, key=genre_dict.get)]])['tracks']:
+            print('track: ', track)
             store_tracks.append(
                 {
                     'title': track['name'],
                     'artist': track['artists'][0]['name'],
-                    'cover': track['album']['images'][0]['url']
+                    'cover': track['album']['images'][0]['url'],
+                    'uri': track['uri']
                 })
 
         recommended_tracks = PredictDao.create_connection(user_id, store_tracks)

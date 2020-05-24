@@ -14,7 +14,8 @@ class PredictDao:
                                     user_id text NOT NULL,
                                     title text NOT NULL,
                                     artist text NOT NULL,
-                                    cover integer NOT NULL,
+                                    cover text NOT NULL,
+                                    uri text NOT NULL,
                                     FOREIGN KEY (user_id) REFERENCES User (user_id)
                                 )''')
 
@@ -25,9 +26,10 @@ class PredictDao:
                 title = track['title']
                 artist = track['artist']
                 cover = track['cover']
+                uri = track['uri']
 
-                c.execute("INSERT INTO Recommendations VALUES (?,?,?,?)", (
-                    user_id, title, artist, cover
+                c.execute("INSERT INTO Recommendations VALUES (?,?,?,?,?)", (
+                    user_id, title, artist, cover, uri
                 ))
                 conn.commit()
 
