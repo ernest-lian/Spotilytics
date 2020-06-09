@@ -1,36 +1,42 @@
 import sqlite3
 from sqlite3 import Error
+from backend.src.constants.constants import database_name
+
 
 class RecommendationsDao:
-    @staticmethod
-    def create_connection(user_id, recommended_tracks):
-        """ create a database connection to a SQLite database """
-        conn = None
+    def __init__(self):
+        """ create a connection to the spotilytics database """
+        self.__db_connection = sqlite3.connect(database_name)
+        self.__db_cursor = self.__db_connection.cursor()
+
+    def store_recommendations(self, user_id, recommended_tracks):
+        """ store in the Recommendations table """
         try:
-            conn = sqlite3.connect('spotilytics.db')
-            c = conn.cursor()
-
-            c.execute('''CREATE TABLE IF NOT EXISTS Recommendations( 
-                                    user_id text NOT NULL,
-                                    title text NOT NULL,
-                                    artist text NOT NULL,
-                                    cover text NOT NULL,
-                                    uri text NOT NULL,
-                                    FOREIGN KEY (user_id) REFERENCES Users (user_id)
-                                )''')
-
-            c.execute("DELETE FROM Recommendations")
-            conn.commit()
-
-            recommended_tracks_rows = list(map(lambda x: (user_id, x['title'], x['artist'], x['cover'], x['uri']), recommended_tracks))
-            c.executemany('INSERT INTO Recommendations VALUES(?,?,?,?,?)', recommended_tracks_rows)
-            conn.commit()
+            recommended_tracks_rows = list(map(lambda track: (
+                user_id, track['title'], track['artist'], track['cover'], track['uri']
+            ), recommended_tracks))
+            self.__db_cursor.executemany('INSERT INTO Recommendations VALUES(?,?,?,?,?)', recommended_tracks_rows)
+            self.__db_connection.commit()
 
             return recommended_tracks
-
         except Error as e:
             print(e)
             raise e
-        finally:
-            if conn:
-                conn.close()
+
+    def fetch_recommendations(self, user_name):
+        """ fetch playlist from the Recommendations table """
+        try:
+            self.__db_cursor.execute("SELECT id FROM Users WHERE user_name =?", (user_name,))
+            user_id = self.__db_cursor.fetchone()[0]
+
+            self.__db_cursor.execute("SELECT uri FROM Recommendations WHERE user_id =?", (user_id,))
+            rows = self.__db_cursor.fetchall()
+
+            return [track[0] for track in rows]
+        except Error as e:
+            print(e)
+            raise e
+
+    def __del__(self):
+        """ close the connection """
+        self.__db_connection.close()

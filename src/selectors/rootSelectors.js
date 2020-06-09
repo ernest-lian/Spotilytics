@@ -51,3 +51,17 @@ export const getRecommendations = createSelector(
         return state.get('recommendations');
     }
 );
+
+export const getPlaylistAcknowledge = createSelector(
+    baseState,
+    (state) => {
+        return state.get('playlistAcknowledge');
+    }
+);
+
+export const getErrorMessage = createSelector(
+    baseState,
+    (state) => {
+        return state.get('errorMessage');
+    }
+);

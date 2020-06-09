@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import configureStore from './src/store';
-
-import Application from './src/application'
+import Application from './src/user-interfaces/application'
+import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(<Provider store={configureStore()}>
                     <Application/>

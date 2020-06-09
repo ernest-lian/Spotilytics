@@ -32,3 +32,13 @@ export const setRecommendations = recommendations => ({
      type: 'SET_RECOMMENDATIONS',
      payload: recommendations
 });
+
+export const setPlaylistAcknowledge = playlistAcknowledge => ({
+     type: 'SET_PLAYLIST_ACKNOWLEDGE',
+     payload: playlistAcknowledge
+});
+
+export const setErrorMessage = errorMessage => ({
+     type: 'SET_ERROR_MESSAGE',
+     payload: errorMessage
+});

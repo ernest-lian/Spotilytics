@@ -8,7 +8,7 @@ def validate_playlist(value):
             })
 
         schema(value)
-        return {'response': 200, 'body': value}
+        return value
     except MultipleInvalid as e:
         print(e)
         raise e

@@ -1,35 +1,32 @@
 import sys
 import json
+import sqlite3
 
-# Flask imports
 from flask import Flask, request
 from flask_cors import CORS
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, jwt_refresh_token_required, get_jwt_identity
 
-# Spotipy imports
 import spotipy
 import spotipy.util as util
 
-# Model imports
-from backend.src.top_artists_model.top_artists_model import TopArtistsModel
-from backend.src.top_tracks_model.top_tracks_model import TopTracksModel
-from backend.src.analytics_model.analytics_model import AnalyticsModel
-from backend.src.recommendations_model.recommendations_model import RecommendationsModel
-from backend.src.playlist_model.playlist_model import PlaylistModel
-from backend.src.user_model.user_model import UserModel
-
-# Validation imports
+import backend.src.dashboard_model.dashboard_model as DashboardModel
+import backend.src.analytics_model.analytics_model as AnalyticsModel
+import backend.src.recommendations_model.recommendations_model as RecommendationsModel
+import backend.src.users_model.users_model as UsersModel
 from backend.src.validations.validations import validate_playlist
+from backend.src.constants.constants import database_name, number_of_tracks, number_of_artists, long_term
 
 app = Flask(__name__)
 CORS(app)
-app.config['JWT_SECRET_KEY'] = 'jwt-secret-string'
-jwt = JWTManager(app)
 
 
-@app.route('/login', methods = ['POST'])
+def init_db():
+    conn = sqlite3.connect(database_name)
+    with app.open_resource('schema.sql') as f:
+        conn.executescript(f.read().decode('utf8'))
+
+@app.route('/login', methods=['POST'])
 def login_spotify():
-    '''
+    """
     This method will log the user in and process all analytics and recommendations
     :return:
     200 Response OK
@@ -97,8 +94,9 @@ def login_spotify():
             ]
         }
     }
+    """
 
-    '''
+    init_db()
     scope = 'user-read-recently-played user-top-read'
 
     with app.app_context():
@@ -117,41 +115,43 @@ def login_spotify():
         sp.trace = False
 
         try:
+
             # Logs in the user
             me = sp.me()
-            response = UserModel.create_user(me)
+            response = UsersModel.create_user(me)
             user_id = response['body']['id']
 
             # Processes the user's most played artists
-            top_artists_response = TopArtistsModel.store(user_id, sp.current_user_top_artists(5, 0, 'long_term'))
+            top_artists_response = DashboardModel.store_top_artists(user_id, sp.current_user_top_artists(number_of_artists, 0, long_term))
             response['body']['top_artists'] = top_artists_response
 
             # Process the user's most played tracks
-            top_tracks_response = TopTracksModel.store(user_id, sp.current_user_top_tracks(5, 0, 'long_term'))
+            top_tracks_response = DashboardModel.store_top_tracks(user_id, sp.current_user_top_tracks(number_of_artists, 0, long_term))
             response['body']['top_tracks'] = top_tracks_response
 
             # Fetch the user's top played tracks
             top_tracks = []
-            for entry in sp.current_user_top_tracks(20, 0, 'long_term')['items']:
+            for entry in sp.current_user_top_tracks(number_of_tracks, 0, long_term)['items']:
                 top_tracks.append(entry['uri'])
 
             # Process the user's most played tracks analytics
             response['body']['analytics'] = AnalyticsModel.store_analytics(user_id, sp, top_tracks)
 
             # Get the user's recommendations
-            response['body']['recommendations'] = RecommendationsModel.store_predictions(user_id, sp, top_tracks)
+            response['body']['recommendations'] = RecommendationsModel.store_recommendations(user_id, sp, top_tracks)
         except Exception:
-            return {'status_code': 400, 'error': 'An error occurred'}
+            return {
+                        'status_code': 400,
+                        'error': 'An error occurred'
+                    }
 
         response['response'] = 200
-
-        print('response: ', response)
         return response
 
 
 @app.route('/playlist', methods=['POST'])
 def create_playlist():
-    '''
+    """
     This method will create a playlist for the user
     :return:
     200 Response OK
@@ -167,17 +167,11 @@ def create_playlist():
         'message': 'Please enter a valid string of at least length 1'
     }
 
-    '''
+    """
+
     scope = 'user-read-recently-played user-top-read'
 
     with app.app_context():
-
-        if len(sys.argv) > 1:
-            username = sys.argv[1]
-        else:
-            print("Usage: %s username" % (sys.argv[0],))
-            sys.exit()
-
         user_name = 'ernest.lian97'
 
         token = util.prompt_for_user_token("ernest.lian97", scope, client_id='db3cb208eea947b9b5115eaba840402e',
@@ -186,18 +180,17 @@ def create_playlist():
 
         sp = spotipy.Spotify(auth=token)
 
-
         data = request.data.decode('utf-8')
 
-        # Validate playlist information
+        # Validate playlist payload
         try:
             validated_data = validate_playlist(json.loads(data))
         except Exception:
             return {'status_code': 400, 'message': 'Playlist name must be a string of at least length 1'}
 
-        # Create playlist
+        # Create and store playlist
         try:
-            response = PlaylistModel.create(sp, validated_data, user_name)
+            response = RecommendationsModel.store_playlist(sp, validated_data, user_name)
         except Exception:
             return {'status_code': 400, 'error': 'An error occurred while creating your playlist'}
 

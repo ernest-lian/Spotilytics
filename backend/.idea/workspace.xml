@@ -2,25 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5068473-eb68-4b2f-8d50-2c039207b362" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/UserDao/UserDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/UserDao/UserDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../containers/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../containers/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../containers/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../containers/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../containers/sideNavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../containers/sideNavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../containers/topNavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../containers/topNavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/dist/runtime/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/dist/runtime/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/dist/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/dist/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/dist/ValidationError.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/dist/ValidationError.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/dist/keywords/absolutePath.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/dist/keywords/absolutePath.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/node_modules/schema-utils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/css-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/css-loader/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/react-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/react-dom/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine_learning/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.cache-ernest.lian97" beforeDir="false" afterPath="$PROJECT_DIR$/src/.cache-ernest.lian97" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/analytics_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics_model/analytics_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/energetic_track_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/energetic_track_dao/energetic_track_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/fastest_track_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/fastest_track_dao/fastest_track_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/longest_track_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/longest_track_dao/longest_track_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/popular_track_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics_model/popular_track_dao/popular_track_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playlist_model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playlist_model/playlist_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playlist_model/playlist_dao/playlist_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playlist_model/playlist_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recommendations_model/recommendations_dao/recommendations_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendations_model/recommendations_dao/recommendations_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recommendations_model/recommendations_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendations_model/recommendations_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spotilytics.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_artists_model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_artists_model/top_artists_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_artists_model/top_artists_dao/top_artists_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_artists_model/top_artists_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_tracks_model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_tracks_model/top_tracks_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_tracks_model/top_tracks_dao/top_tracks_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top_tracks_model/top_tracks_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user_model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user_model/user_dao/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user_model/user_dao/user_dao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user_model/user_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validations/validations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/validations/validations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/ctx.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/ctx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/markupsafe/_native.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/markupsafe/_native.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/commands/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/commands/install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/requests/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/urllib3/connectionpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/@fortawesome/fontawesome-free/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/@fortawesome/fontawesome-free/metadata/icons.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/actions/rootAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/actions/rootAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/analytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/artists.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/constants/sideNavigationConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/delete later/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/delete later/profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/delete later/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/delete later/sideNavigationBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/delete later/topNavigationBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/navigationOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/recommendations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/reducers/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/reducers/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/selectors/rootSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/selectors/rootSelectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/song.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/trackDetails.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../webpack/webpack.dev.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webpack/webpack.dev.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,46 +80,53 @@
     <session id="-1018250904">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="13" />
+          <entry key="py" value="222" />
+          <entry key="sql" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="13" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="219" />
+          <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5781" />
+          <entry key="dummy" value="49" />
+          <entry key="py" value="15231" />
+          <entry key="sql" value="535" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5781" />
+          <entry key="PLAIN_TEXT" value="2003" />
+          <entry key="Python" value="13277" />
+          <entry key="SQL" value="535" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../yeehaw.mp3/app.py">
+        <entry file="file://$PROJECT_DIR$/machine_learning/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1580064437153" expanded="true" signature="419:464" ph="..." />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,10 +134,35 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>get_dashboard</find>
       <find>USERDAO</find>
+      <find>TopArtists</find>
+      <find>validate_playlist</find>
+      <find>DashboardModel</find>
+      <find>spotilytics</find>
+      <find>UserModel</find>
+      <find>EnergeticTracksDao</find>
+      <find>TopArtistsDao</find>
+      <find>TopTracksDao</find>
+      <find>20</find>
+      <find>store_predictions</find>
+      <find>long_term</find>
+      <find>get_jwt_identity</find>
+      <find>jwt_refresh_token_required</find>
+      <find>jwt_required</find>
+      <find>create_access_token</find>
+      <find>JWTManager</find>
+      <find>create_user</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,10 +177,45 @@
         <option value="$PROJECT_DIR$/User/UserDao/UserDao.py" />
         <option value="$PROJECT_DIR$/User/app.py" />
         <option value="$PROJECT_DIR$/../../yeehaw.mp3/app.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/fastest_dao/fastest_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/energetic_dao/energetic_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/popular_dao/popular_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/longest_dao/longest_dao.py" />
+        <option value="$PROJECT_DIR$/src/playlist_model/playlist_dao/playlist_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/popular_track_dao/popular_track_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/longest_track_dao/longest_track_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/fastest_track_dao/fastest_track_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/energetic_track_dao/energetic_track_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/longest_track_dao/longest_tracks_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/popular_tracks_dao/popular_track_dao.py" />
+        <option value="$PROJECT_DIR$/src/validations/validations.py" />
+        <option value="$PROJECT_DIR$/src/user_model/user_model.py" />
+        <option value="$PROJECT_DIR$/src/user_model/user_dao/user_dao.py" />
+        <option value="$PROJECT_DIR$/src/user_model/users_model.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/longest_tracks_dao/longest_tracks_dao.py" />
+        <option value="$PROJECT_DIR$/src/recommendations_model/playlist_dao/playlist_dao.py" />
+        <option value="$PROJECT_DIR$/src/dashboard_model/top_tracks_dao/top_tracks_dao.py" />
+        <option value="$PROJECT_DIR$/src/recommendations_model/recommendations_dao/recommendations_dao.py" />
+        <option value="$PROJECT_DIR$/src/users_model/users_dao/users_dao.py" />
+        <option value="$PROJECT_DIR$/src/recommendations_model/recommendations_model.py" />
+        <option value="$PROJECT_DIR$/src/dashboard_model/top_artists_dao/top_artists_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/energetic_tracks_dao/energetic_tracks_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/fastest_tracks_dao/fastest_tracks_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/popular_tracks_dao/popular_tracks_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/analytics_dao/analytics_dao.py" />
+        <option value="$PROJECT_DIR$/src/analytics_model/analytics_model.py" />
+        <option value="$PROJECT_DIR$/src/constants/constants.py" />
+        <option value="$PROJECT_DIR$/src/integration_tests.py" />
+        <option value="$PROJECT_DIR$/src/schema.sql" />
+        <option value="$PROJECT_DIR$/src/dashboard_model/dashboard_model.py" />
+        <option value="$PROJECT_DIR$/src/tests/integration_tests.py" />
+        <option value="$PROJECT_DIR$/src/users_model/users_model.py" />
+        <option value="$PROJECT_DIR$/src/app.py" />
+        <option value="$PROJECT_DIR$/machine_learning/model.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="37" />
     <option name="y" value="23" />
     <option name="width" value="1166" />
@@ -113,7 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,24 +237,24 @@
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="machine_learning" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="DashboardDao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-              <item name="UserDao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="users_model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,6 +262,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/tests" />
+      <recent name="$PROJECT_DIR$/src/recommendations_model" />
+      <recent name="$PROJECT_DIR$/src/dashboard_model" />
+      <recent name="$PROJECT_DIR$/src/analytics_model" />
       <recent name="$PROJECT_DIR$/User" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -182,14 +299,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="23" width="1166" height="716" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24978165" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32883242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32852563" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32852563" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -209,55 +326,155 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/User/validate_user.py" />
-    <entry file="file://$PROJECT_DIR$/User/UserDao/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/DashboardDao/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/DashboardDao/DashboardDao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/UserDao/UserDao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/validations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1580063472948" expanded="true" signature="6073:6170" ph="..." />
-            <marker date="1580063472948" expanded="true" signature="6823:6826" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/User/UserDao/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/User/DashboardDao/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/User/DashboardDao/DashboardDao.py" />
+    <entry file="file://$PROJECT_DIR$/User/UserDao/UserDao.py" />
+    <entry file="file://$PROJECT_DIR$/User/validations.py" />
+    <entry file="file://$PROJECT_DIR$/User/app.py" />
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/longest_tracks_dao/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/energetic_tracks_dao/__init__.py" />
     <entry file="file://$PROJECT_DIR$/../../yeehaw.mp3/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top_artists_model/top_artists_model.py" />
+    <entry file="file://$PROJECT_DIR$/src/top_tracks_model/top_tracks_model.py" />
+    <entry file="file://$PROJECT_DIR$/src/dashboard_model/__Init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/playlist_model/playlist_model.py" />
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/fastest_tracks_dao/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/validations/validations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/users_model/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/analytics_dao/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/longest_tracks_dao/longest_tracks_dao.py" />
+    <entry file="file://$PROJECT_DIR$/src/recommendations_model/playlist_dao/playlist_dao.py" />
+    <entry file="file://$PROJECT_DIR$/src/users_model/users_dao/users_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/energetic_tracks_dao/energetic_tracks_dao.py" />
+    <entry file="file://$PROJECT_DIR$/src/dashboard_model/top_tracks_dao/top_tracks_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendations_model/recommendations_dao/recommendations_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/fastest_tracks_dao/fastest_tracks_dao.py" />
+    <entry file="file://$PROJECT_DIR$/src/dashboard_model/top_artists_dao/top_artists_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/analytics_dao/analytics_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics_model/analytics_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/unit_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="178" selection-start-line="178" selection-end-line="179" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dashboard_model/dashboard_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendations_model/recommendations_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/integration_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="180" column="27" lean-forward="true" selection-start-line="180" selection-start-column="27" selection-end-line="180" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/users_model/users_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine_learning/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1580064437153" expanded="true" signature="419:464" ph="..." />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,8 @@ import Immutable from 'immutable';
 
 const initialState = Immutable.Map({
   'name': '',
-  'currentPage': 'Dashboard'
+  'currentPage': '',
+  'errorMessage': ''
 });
 
 const simpleReducer = (state = initialState, action) => {
@@ -27,6 +28,12 @@ const simpleReducer = (state = initialState, action) => {
         return state
       case 'SET_RECOMMENDATIONS':
         state = state.set('recommendations', action.payload);
+        return state
+      case 'SET_PLAYLIST_ACKNOWLEDGE':
+        state = state.set('playlistAcknowledge', action.payload);
+        return state
+      case 'SET_ERROR_MESSAGE':
+        state = state.set('errorMessage', action.payload);
         return state
     default:
       return state
