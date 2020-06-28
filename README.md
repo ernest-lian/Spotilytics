@@ -43,8 +43,13 @@ Initial low fidelity prototype designs for the application's user interface to p
 
 
 
-        Dashboard Page               Analytics Page              Predictions Page
+Dashboard Page               Analytics Page              Predictions Page
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/dashboard.PNG?raw=true)
 
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/analytics.PNG?raw=true)
+
+
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/predictions.PNG?raw=true)
 ## Color Palettes
 
 Background
