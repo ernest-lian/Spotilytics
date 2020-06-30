@@ -40,28 +40,23 @@ Collected the requirements for the project to have a better scope prior to the d
 ## User Interface
 Initial low fidelity prototype designs for the application's user interface to provide a mockup for reference. The reason that I crated these is because it gave me a general idea as to how I wanted the UI to look like. This was extremely useful as I had realized after that the side navigation bar I had initially planned for created a lot of unecesscary space and was not providing a experience for the user which made me ultimately decide to switch up the layout.
 
-Dashboard Page\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/dashboard.PNG?raw=true)
-
-Analytics Page\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/analytics.PNG?raw=true)
-
-Predictions Page\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/predictions.PNG?raw=true)
 
 
 ## Color Palettes
 
-#Background\
+Background\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23A8E6CF.png?raw=true)
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23B49FCC.png?raw=true)
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23DCEDC1.png?raw=true)
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23FFD3B6.png?raw=true)
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23CADBC8.png?raw=true)
 
-#Text\
-#FAFF00
-#F4C3C2
+Text\
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23F4C3C2.png?raw=true)
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23FAFF00.png?raw=true)
 
 # Development
 This section will highlight the development process of the application 
