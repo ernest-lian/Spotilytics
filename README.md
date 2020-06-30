@@ -40,26 +40,28 @@ Collected the requirements for the project to have a better scope prior to the d
 ## User Interface
 Initial low fidelity prototype designs for the application's user interface to provide a mockup for reference. The reason that I crated these is because it gave me a general idea as to how I wanted the UI to look like. This was extremely useful as I had realized after that the side navigation bar I had initially planned for created a lot of unecesscary space and was not providing a experience for the user which made me ultimately decide to switch up the layout.
 
-
-
-
-Dashboard Page               Analytics Page              Predictions Page
+Dashboard Page\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/dashboard.PNG?raw=true)
 
+Analytics Page\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/analytics.PNG?raw=true)
 
-
+Predictions Page\
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/prototypes/predictions.PNG?raw=true)
+
+
 ## Color Palettes
 
-Background
- 
-  #A8E6CF     #B49FCC    #DCEDC1     #FFD3B6     #CADBC8
+Background\
+#A8E6CF
+#B49FCC
+#DCEDC1
+#FFD3B6
+#CADBC8
 
-
-Text
-
-  #FAFF00   #F4C3C2
+Text\
+#FAFF00
+#F4C3C2
 
 # Development
 This section will highlight the development process of the application 
