@@ -52,14 +52,14 @@ Predictions Page\
 
 ## Color Palettes
 
-Background\
-#A8E6CF
-#B49FCC
-#DCEDC1
-#FFD3B6
-#CADBC8
+#Background\
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23A8E6CF.png?raw=true)
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23B49FCC.png?raw=true)
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23DCEDC1.png?raw=true)
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23FFD3B6.png?raw=true)
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/colors/%23CADBC8.png?raw=true)
 
-Text\
+#Text\
 #FAFF00
 #F4C3C2
 
