@@ -111,6 +111,21 @@ The genre of a song is a subjective opinion that cannot be determined by numeric
 	- Store specific subset of UUIDs on specific machines by sharding
 	- Add a directory table that maps the specific range of UUIDs to the specific server that the data is on to make the query time faster
 
+# Demo
+
+Below are gif demos of my application
+
+## Dashboard Page
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/dashboard.gif?raw=true)
+
+## Analytics Page
+![alt_text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/analytics.gif?raw=true)
+
+## Recommendations Page
+![alt_text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/recommendations.gif?raw=true)
+
+![alt_text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/spotify.gif?raw=true)
+
 # Instructions
 ## Folder structure
 Spotlytics
