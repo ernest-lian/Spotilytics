@@ -113,7 +113,7 @@ The genre of a song is a subjective opinion that cannot be determined by numeric
 
 # Demo
 
-Below are gif demos of my application
+Below are gif demos of my application using my own Spotify account's data
 
 ## Dashboard Page
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/dashboard.gif?raw=true)
