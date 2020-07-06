@@ -172,10 +172,10 @@ def create_playlist():
     scope = 'user-read-recently-played user-top-read'
 
     with app.app_context():
-        user_name = 'ernest.lian97'
+        username = 'USERNAME_HERE'
 
-        token = util.prompt_for_user_token("ernest.lian97", scope, client_id='db3cb208eea947b9b5115eaba840402e',
-                                           client_secret='7b4727b89b3f463985624fe4c145bc97',
+        token = util.prompt_for_user_token(username, scope, client_id='CLIENT_ID_HERE',
+                                           client_secret='CLIENT_SECRET_HERE',
                                            redirect_uri='https://example.com/callback/')
 
         sp = spotipy.Spotify(auth=token)
@@ -190,7 +190,7 @@ def create_playlist():
 
         # Create and store playlist
         try:
-            response = RecommendationsModel.store_playlist(sp, validated_data, user_name)
+            response = RecommendationsModel.store_playlist(sp, validated_data, username)
         except Exception:
             return {'status_code': 400, 'error': 'An error occurred while creating your playlist'}
 
