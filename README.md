@@ -63,7 +63,11 @@ This section will highlight the development process of the application
 ## Database 
 My approach when creating the database was a normalized design as I didn't need to incorporate any expensive operations which ultimately prevented any redundancy of storage in the database.
 
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/diagrams/database.png?raw=true)
 
+## Architecture
+An overview of the application's architecture
+![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/diagrams/architecture.png?raw=true)
 
 
 ## Endpoints
@@ -80,39 +84,42 @@ My approach when creating the database was a normalized design as I didn't need 
 # Takeaways
 
 The genre of a song is a subjective opinion that cannot be determined by numerical values as it is based on the ambiance that it provides a user. The production styles have changed throughout the generations which lowers the accuracy of same styled songs to have similar values for the tempo and energy. Even if I had a dataset of 1,000,000 tracks there would be too much variation in the relationship between tempo and energy for a correlation to appear. Using a classifier like I did is difficult as genre shouldn't be represented as a numerical value. A better approach would be to find tracks listened by other individuals who share a similar streaming history as you do which is the approach that streaming platforms such as Apple Music and Spotify use which is why their recommendations have a lot higher accuracy.
-Performance Bottlenecks
-Making multiple HTTP requests resulted in having to block when switching pages
-Made one single HTTP request at the beginning of connection with the server
-High latency can cause many small requests to perform a lot worse than one large one
-Less extra HTTP request and response headers to handle
-Easy to define each request as a transaction that was applied or rolled back instead of having some requests that succeeded and some that failed which can cause inconsistency 
-Having the Analytics table split into 4 respective tables that represent each respective analytic
-Unnecessary as the schema was the same for all 4 tables
-Resulted in extra calls to the database which can be expensive
-This can result in eventually running out of memory but sharding can resolve this issue
-Ways to Scale
-Deleting the database every single time 
-Fetching the most up to date analytics when the user requests it but otherwise query the database to prevent having to do this
-Initialized database connections every query
-Single database dao entity could be solution but this can be a single point of failure as well concurrent connections will have to block
-Implementing a database pooling strategy will allow me to reuse database connections
-Many database accesses
-Can have some sort of a queue for the clients as it is write heavy
-Supports only a single client
-Implement multithreading to allow concurrent access to the server by multiple clients
-User has a one-to-many relationship with the other tables in the database which can result in not enough memory if hypothetically all 271 million Spotify users used this
-Store specific subset of UUIDs on specific machines by sharding
-Add a directory table that maps the specific range of UUIDs to the specific server that the data is on to make the query time faster
+
+## Performance Bottlenecks
+1. Making multiple HTTP requests resulted in having to block when switching pages
+	- Made one single HTTP request at the beginning of connection with the server
+		- High latency can cause many small requests to perform a lot worse than one large one
+		- Less extra HTTP request and response headers to handle
+		- Easy to define each request as a transaction that was applied or rolled back instead of having some requests that succeeded and some that failed which can cause inconsistency 
+2. Having the Analytics table split into 4 respective tables that represent each respective analytic
+	- Unnecessary as the schema was the same for all 4 tables
+	- Resulted in extra calls to the database which can be expensive
+	- This can result in eventually running out of memory but sharding can resolve this issue
+
+## Ways to Scale
+3. Deleting the database every single time 
+	- Fetching the most up to date analytics when the user requests it but otherwise query the database to prevent having to do this
+	- Schedule a cron job that periodically updates the analytics for users who are already registered and fetch analytics for new users or when it is requested
+4. Initialized database connections every query
+	- Single database dao entity could be solution but this can be a single point of failure as well concurrent connections will have to block
+	- Implementing a database pooling strategy will allow me to reuse database connections
+5. Many database accesses
+	- Can have some sort of a queue for the clients as it is write heavy
+6. Supports only a single client
+	- Implement multithreading to allow concurrent access to the server by multiple clients
+7. User has a one-to-many relationship with the other tables in the database which can result in not enough memory if hypothetically all 271 million Spotify users used this
+	- Store specific subset of UUIDs on specific machines by sharding
+	- Add a directory table that maps the specific range of UUIDs to the specific server that the data is on to make the query time faster
 
 # Instructions
 ## Folder structure
 Spotlytics
-------- src (stores the front end components)
-	------- backend (stores the backend and machine learning code)
-		------- machine_learning (stores the machine learning code)
-		------- src (stores the backend code)
-	------- package.json
-	------- index.js
+- src (stores the front end components)
+	- backend (stores the backend and machine learning code)
+		- machine_learning (stores the machine learning code)
+		- src (stores the backend code)
+	- package.json
+	- index.js
 
 ## Execution instructions
 ### Front end
