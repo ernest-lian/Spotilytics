@@ -138,7 +138,8 @@ Spotlytics
 
 ## Execution instructions
 ### Front end
-Navigate to the directory Spotlytics and execute npm run dev to start up the front end
+- Navigate to the directory Spotlytics and execute npm run dev to start up the front end
 ### Back end
-Navigate to the directory Spotilytics/backend/src and execute flask run to start up the back end
+- Add respective Spotify username, client ID and client secret to the login_spotify method in app.py 
+- Navigate to the directory Spotilytics/backend/src and execute flask run to start up the back end
 
