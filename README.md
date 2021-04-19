@@ -119,7 +119,7 @@ Below are gif demos of my application using my own Spotify account's data
 ![alt text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/dashboard.gif?raw=true)
 
 ## Analytics Page
-![alt_text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/analytics.gif?raw=true)
+![alt_text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/new-analytics.gif?raw=true)
 
 ## Recommendations Page
 ![alt_text](https://github.com/ernest-lian/Spotilytics/blob/master/documentation/demo/recommendations.gif?raw=true)
