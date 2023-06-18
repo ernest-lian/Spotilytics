@@ -75,12 +75,17 @@ Collected the requirements for the project to have a better scope prior to the d
 # Solution
 
 **Receive analytics to develop better insights on past streaming history**<br>
-Process the retrieved data to generate meaningful analytics and insights based on analyzing listening patterns, identifying favorite genres, artists, and tracks.
+Process the retrieved data to generate meaningful analytics and insights based on analyzing listening patterns, identifying favorite genres, artists, and tracks.<br>
 
+
+<img src="/documentation/demo/spotilytics-gif.gif?raw=true" width="250" height="500"/>
 
 
 **Discover new tracks and genres personalized your streaming history**<br>
-Develop new personalized playlists that sync to your Spotify account to assist in discovering new subgenres or niche artists within your favorite genres.
+Develop new personalized playlists that sync to your Spotify account to assist in discovering new subgenres or niche artists within your favorite genres.<br>
+
+<img src="/documentation/demo/spotilytics-gif-two.gif?raw=true" width="250" height="500"/>
+
 
 # Development
 This section will highlight the development process of the application 
